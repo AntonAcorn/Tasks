@@ -1,0 +1,20 @@
+For this task you need:
+Read data from the console until the word "exit" is entered.
+For each value except "exit", call the print() method. If value:
+contains a dot '.', call the print() method on Double;
+greater than zero but less than 128, call the print() method on short;
+less than or equal to zero or greater than or equal to 128, call the print() method on Integer;
+otherwise, call the print() method on String.
+
+Разные методы для разных типов
+В этой задаче тебе нужно:
+Считывать с консоли данные, пока не будет введено слово "exit".
+Для каждого значения, кроме "exit", вызвать метод print(). Если значение:
+содержит точку '.', вызвать метод print() для Double;
+больше нуля, но меньше 128, вызвать метод print() для short;
+меньше либо равно нулю или больше либо равно 128, вызвать метод print() для Integer;
+иначе — вызвать метод print() для String.
+
+Вывод: можно создать буффер ридер с инт и положить в него стринг
+String str;
+int i = Integer.parseInt(str);
