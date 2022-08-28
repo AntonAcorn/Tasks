@@ -1,4 +1,4 @@
-
+package t1530;
 
 import java.io.BufferedReader;
 import java.io.IOException;
