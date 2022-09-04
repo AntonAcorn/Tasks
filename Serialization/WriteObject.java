@@ -7,7 +7,7 @@ import java.io.ObjectOutputStream;
 public class WriteObject {
     public static void main(String[] args) {
         Person person1 = new Person(1, "Bob");
-        Person person2 = new Person(2,"Mike");
+
 
         try {
             // Создали файл, в который мы будем записывать данные
@@ -21,7 +21,6 @@ public class WriteObject {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
 
             objectOutputStream.writeObject(person1);
-            objectOutputStream.writeObject(person2);
 
             fileOutputStream.close();           //Не забывать закрывать! Иначе не будет работать
 
