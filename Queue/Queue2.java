@@ -3,7 +3,8 @@ package Queue;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
-
+//первый зашел, первый вышел
+//first in first out
 public class Queue2 {
     public static void main(String[] args) {
         Person person1 = new Person(1);
