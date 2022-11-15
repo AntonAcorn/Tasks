@@ -13,7 +13,7 @@ public class comparatorMap {
         map.put("e", 1);
         map.put("d", 2);
 //        sortByValue(map);
-        map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
+       map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
 
     }
 
