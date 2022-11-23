@@ -14,6 +14,9 @@ public class BreakCamelCase {
 
     }
     public static String camelCase(String input) {
+        if(input.length() == 0){
+            return null;
+        }
         String result = "";
         char [] character = input.toCharArray();
         for (int i = 0; i < character.length-1; i++) {
