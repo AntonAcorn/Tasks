@@ -2,17 +2,18 @@ package semaphorePhilosophers;
 
 import java.util.concurrent.Semaphore;
 
-public class Philosopher extends Thread{
+public class Philosopher extends Thread {
     private Semaphore sem;
     private String name;
     private boolean full = false;
 
-    public Philosopher(Semaphore sem, String name){
+    public Philosopher(Semaphore sem, String name) {
         this.sem = sem;
         this.name = name;
     }
-public void run(){
-        if(!full){
+
+    public void run() {
+        if (!full) {
             try {
                 sem.acquire();
                 System.out.println(name + " кушает");
@@ -27,8 +28,6 @@ public void run(){
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
         }
-}
-
+    }
 }
