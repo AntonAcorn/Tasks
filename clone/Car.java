@@ -9,6 +9,18 @@ public class Car implements Cloneable{
         this.driver = driver;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Car(Car newCar) throws CloneNotSupportedException {
+        this(newCar.getName(), newCar.getDriver().clone());
+    }
+
     public Driver getDriver() {
         return driver;
     }
@@ -19,6 +31,17 @@ public class Car implements Cloneable{
 
     @Override
     protected Car clone() throws CloneNotSupportedException {
-        return (Car) super.clone();
+        Car newCar = (Car) super.clone();
+        Driver newDriver = this.getDriver().clone();
+        newCar.setDriver(newDriver);
+        return newCar;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "name='" + name + '\'' +
+                ", driver=" + driver +
+                '}';
     }
 }
